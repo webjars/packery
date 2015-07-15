@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>packery</artifactId>
-    <version>1.4.3-SNAPSHOT</version>
+    <version>1.4.2-1-SNAPSHOT</version>
     <name>Packery</name>
     <description>WebJar for Packery</description>
     <url>http://webjars.org</url>
@@ -86,7 +86,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/js" />
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}" includes="js/ dist/"/>
                                 </move>
                             </target>
                         </configuration>
